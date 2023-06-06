@@ -30,6 +30,8 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: CHECK FOR STATUS_CODE
-        if: ${{ env.STATUS_CODE==200 }}
+        if: ${{ env.STATUS_CODE<>200 }}
         run: |
-          echo "Site was reached."
+          echo "We need to create the site"
+          echo az group create 
+          echo az ...
