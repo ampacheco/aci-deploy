@@ -30,5 +30,6 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: CHECK FOR STATUS_CODE
+        if: ${{ env.STATUS_CODE==200 }}
         run: |
-          echo "STATUS_CODE=${{ env.STATUS_CODE }}"
+          echo "Site was reached."
