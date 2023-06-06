@@ -39,5 +39,5 @@ jobs:
         with:
           azcliversion: 2.30.0
           inlineScript: | 
-            az group create -n web-dvwa-rg
+            az group create -n web-dvwa-rg -l eastus
             az container create --name web-dvwa --dns-name-label web-dvwa --image vulnerables/web-dvwa -g web-dvwa-rg
