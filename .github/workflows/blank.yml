@@ -31,4 +31,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: CHECK FOR STATUS_CODE
         run: |
-          echo ${{ env.STATUS_CODE }}
+          echo "STATUS_CODE=${{ env.STATUS_CODE }}"
