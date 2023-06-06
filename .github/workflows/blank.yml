@@ -1,5 +1,4 @@
 # This is a basic workflow to help you get started with Actions
-
 name: CI
 
 # Controls when the workflow will run
@@ -40,4 +39,5 @@ jobs:
         with:
           azcliversion: 2.30.0
           inlineScript: | 
-            az group list -otable
+            az group create -n web-dvwa-rg
+            az container create --name web-dvwa --dns-name-label web-dvwa --image vulnerables/web-dvwa -g web-dvwa-rg
