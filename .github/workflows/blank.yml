@@ -26,7 +26,7 @@ jobs:
       
       # Runs a single command using the runners shell
       - name: GET Status Code
-        run: echo "STATUS_CODE=$(curl -s -v -L -I -o /dev/null  -w "%{http_code}" http://web-dvwa.eastus.azurecontainer.io)" >> "GITHUB_ENV"
+        run: echo 'STATUS_CODE=$(curl -s -v -L -I -o /dev/null  -w "%{http_code}" http://web-dvwa.eastus.azurecontainer.io)' >> "GITHUB_ENV"
 
       # Runs a set of commands using the runners shell
       - name: CHECK FOR STATUS_CODE
